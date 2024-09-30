@@ -1,0 +1,340 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 20px;
+    list-style-type: none;
+    text-decoration: none;
+}
+body{
+    height: 200vh;
+    background-color: #ddd;
+}
+#menu-btn{
+    display: none;
+}
+
+.logo a{
+    display: flex;
+    align-items: center;
+}
+.logo h1{
+    color: white;
+    font-size: 60px;
+    font-weight: 800;
+    padding-left: 10px;
+}
+
+.logo .fa-car{
+    color: darkgray;
+    font-size: 40px;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    align-items: center;
+    height: 70px;
+    width: 100%;
+    background-color: #333;
+    z-index: 55678;
+    position: fixed;
+    inset: 0;
+    transition: all 0.5s;
+    box-shadow: 0 5px 15px black;
+}
+
+nav ul{
+    display: flex;
+    
+}
+
+nav ul a{
+    padding: 25px 10px;
+    margin: 10px;
+    height: 100%;
+    text-transform: uppercase;
+    color: white;
+    font-weight: 600;
+    font-size: 20px;
+    transition: all 0.2s ease-in-out;
+    border-radius: 0px;
+}
+
+nav ul a:hover{
+    background-color: white;
+    color: black;
+}
+
+#hero{
+    width: 100%;
+    height: 80vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    text-align: left;
+    background-image: url();
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    isolation: isolate;
+    color: cornsilk;
+    transition: all 2s;
+}
+
+
+#hero::after{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: -1;
+}
+#heroText{
+    position: relative;
+    padding-left: 20px;
+    top: 60px;
+    width: 600px;
+    height: 100px;
+    line-height: 30px;
+}
+
+#heroText h2{
+    font-size: 40px;
+    text-transform: uppercase;
+    font-weight: 750;
+    margin-bottom: 10px;
+    line-height: 40px;
+}
+
+#heroText p{
+    text-transform: capitalize;
+    font-size: 20px;
+    font-weight: 750;
+    margin-bottom: 15px;
+}
+
+#heroText a{
+    color: white;
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 20px;
+    border: 2px white solid;
+    padding: 3px;
+    transition: all 0.5s ease-in-out;
+}
+
+#heroText a:hover{
+    background-color: #eee;
+    color: #333;
+}
+main{
+    background-color: darkgray;
+    margin: 50px 0 0;
+    padding: 20px;
+}
+.h2{
+    text-transform: uppercase;
+    font-size: 40px;
+    font-weight: 800;
+    text-align: center;
+    padding: 20px;
+    color: #212;
+    
+}
+
+
+.featured{
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-auto-rows: minmax(100px, auto);
+    grid-gap: 20px;
+    text-align: center;
+}
+
+.featured img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    aspect-ratio: 1/1;
+}
+
+.featured1,.featured2,.featured3,.featured4,.featured5{
+    background-color: gray;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 700px){
+    body{
+        overflow-x: hidden;
+    }
+    .logo h1{
+        font-size: 35px;
+    }
+    .logo .fa-car{
+        font-size: 25px;
+    }
+
+    nav ul a{
+        font-size: 15px;
+        padding: 10px;
+    }
+
+    #menu-btn{
+        display: block;
+        
+    }
+    #menu-toggler{
+        position: relative;
+        display: block;
+        height: 3px;
+        width: 30px;
+        border-radius: 10px;
+        background-color: white;
+        cursor: pointer;
+    }
+    #menu-toggler2{
+        display: block;
+        border-radius: 10px;
+        width: 30px;
+        height: 3px;
+        background-color: white;
+        position: relative;
+        top: -10px;
+        cursor: pointer;
+        transition: all 0.5s ease-in-out;
+    }
+    #menu-toggler3{
+        display: block;
+        width: 30px;
+        height: 3px;
+        border-radius: 10px;
+        background-color: white;
+        position: relative;
+        transform-origin: center;
+        cursor: pointer;
+        transition: all 0.5s ease-in-out;
+    }
+
+    nav{
+        display: block;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        padding: 0;
+        background-color: #333;
+        box-shadow: 0 10px 15px black;
+        width: 100%;
+        transition: all 0.5s ease-in-out;
+        margin-left: 100%;
+        text-align: center;
+    }
+
+    nav ul{
+        display: block;
+        padding: 0;
+        margin: 0;
+    }
+
+    nav ul li{
+        padding: 2px;
+    }
+    nav ul a{
+        display: block;
+        margin: 0;
+        border-radius: 0;
+    }
+
+    #heroText{
+        position: relative;
+        top: 100px;
+        width: 500px;
+    }
+
+    #heroText h2{
+        font-size: 20px;
+    }
+    #heroText p{
+        font-size: 15px;
+    }
+    #heroText a{
+        font-size: 17px;
+    }
+    
+    #menu-btn{
+        display: block;
+        cursor: pointer;
+        padding: 10px;
+    }
+    
+    #menu-toggler2{
+        display: block;
+        width: 30px;
+        height: 3px;
+        background-color: white;
+        position: relative;
+        top: -10px;
+        cursor: pointer;
+        transition: all 0.5s ease-in-out;
+    }
+    #menu-toggler3{
+        display: block;
+        width: 30px;
+        height: 3px;
+        background-color: white;
+        position: relative;
+        transform-origin: center;
+        cursor: pointer;
+        transition: all 0.5s ease-in-out;
+    }
+
+    #menu-toggler{
+        position: relative;
+        display: block;
+        height: 3px;
+        width: 30px;
+        background-color: white;
+        cursor: pointer;
+        transition: all 0.5s ease-in-out;
+    }
+
+    #menu-toggler2.ex{
+        transform-origin: center;
+        transform: rotate(-45deg) translateY(9px);
+    }
+    #menu-toggler3.ex{
+        transform-origin: center;
+        transform: rotate(45deg) translateY(-9px);
+    }
+    nav.ex{
+        display: block;
+        margin-left: 0;
+    }
+    #menu-toggler.ex{
+        opacity: 0;
+    }
+}
